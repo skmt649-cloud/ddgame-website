@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Important files
+Sitemap: https://ddgame.space/sitemap.xml

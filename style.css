@@ -1,12 +1,19 @@
-  /* Base & Mobile-First Styles [citation:2][citation:5] */
+/* Base & Mobile-First Styles */
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
+        html { 
+            scroll-behavior: smooth; 
+            max-width: 100%;
+            overflow-x: hidden;
+        }
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Segoe UI Emoji', Roboto, Oxygen-Sans, Ubuntu, Cantarell, sans-serif;
             line-height: 1.7;
             color: #333;
             background: #fff;
             padding-top: 80px; /* Offset for fixed header */
+            max-width: 100%;
+            overflow-x: hidden;
+            position: relative;
         }
         .container {
             width: 100%;
@@ -19,7 +26,7 @@
             height: auto;
             display: block;
         }
-        /* Ensure images are responsive [citation:2] */
+        /* Ensure images are responsive */
         .responsive-img {
             width: 100%;
             height: auto;
@@ -32,6 +39,8 @@
             color: #d32f2f; 
             line-height: 1.3;
             margin-top: 1.5em;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
         }
         h1 { font-size: 2.2rem; margin-top: 0; }
         h2 { font-size: 1.8rem; border-bottom: 3px solid #ffeb3b; padding-bottom: 0.5rem; display: inline-block; }
@@ -42,8 +51,12 @@
             h3 { font-size: 1.6rem; }
         }
         
-        p { margin-bottom: 1.2rem; }
-        a { color: #d32f2f; text-decoration: none; transition: color 0.2s; }
+        p { 
+            margin-bottom: 1.2rem; 
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        a { color: #d32f2f; text-decoration: none; transition: color 0.2s; word-break: break-word; }
         a:hover { color: #b71c1c; text-decoration: underline; }
         
         /* Buttons */
@@ -60,6 +73,8 @@
             cursor: pointer;
             transition: all 0.3s ease;
             box-shadow: 0 4px 15px rgba(211, 47, 47, 0.3);
+            max-width: 100%;
+            white-space: normal;
         }
         .btn:hover {
             background: linear-gradient(135deg, #b71c1c, #d32f2f);
@@ -180,7 +195,7 @@
         .badge .icon { color: #ffb300; font-weight: bold; }
         
         /* Content Cards & Grids */
-        .section { padding: 50px 0; }
+        .section { padding: 50px 0; width: 100%; overflow: hidden; }
         .cards-grid {
             display: grid;
             grid-template-columns: 1fr;
@@ -318,7 +333,7 @@
         }
         .modal-content h2 { border: none; }
         
-        /* Floating Download Button [citation:2] */
+        /* Floating Download Button */
         .floating-download {
             position: fixed;
             bottom: 25px;
@@ -338,7 +353,10 @@
                 position: fixed;
                 animation: none;
             }
-            .floating-download .btn { width: 100%; }
+            .floating-download .btn { 
+                width: 100%; 
+                display: block;
+            }
         }
         
         /* Footer */
@@ -347,6 +365,8 @@
             color: #ccc;
             padding: 50px 0 20px;
             margin-top: 60px;
+            width: 100%;
+            overflow: hidden;
         }
         .footer-content {
             display: grid;
@@ -365,6 +385,7 @@
             border-top: 1px solid #333;
             font-size: 0.9rem;
             color: #888;
+            word-wrap: break-word;
         }
         
         /* Utility */
@@ -379,4 +400,5 @@
             border-radius: 5px;
             margin: 25px 0;
             font-size: 0.95rem;
+            word-wrap: break-word;
         }

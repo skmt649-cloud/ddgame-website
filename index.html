@@ -54,7 +54,6 @@
     <header>
         <div class="container header-content">
             <div class="logo-container">
-                <!-- Logo Image - Alt text is good, no change needed -->
                 <img src="/images/dd-game-logo.webp" alt="DD Game Official Logo - Skill Based Gaming App"
                     class="logo-img">
                 <div class="logo-text">DD<span>Game</span></div>
@@ -63,11 +62,12 @@
             <!-- Mobile Menu Toggle -->
             <div class="menu-toggle" id="menuToggle">☰</div>
 
-            <!-- Navigation: Added links to key E-E-A-T pages (to be created) -->
+            <!-- Navigation -->
             <nav>
                 <ul id="navMenu">
                     <li><a href="#overview" class="active">Overview</a></li>
-                    <li><a href="https://app.adjust.com/1ivn71t0?label=DEPAMF&redirect=https%3A%2F%2Fdown.dd7778.com%2F">Download</a></li>
+                    <!-- Link 1: Header Nav Download -->
+                    <li><a href="https://down.dd7778.com/" target="_blank" rel="noopener noreferrer">Download</a></li>
                     <li><a href="#games">Games</a></li>
                     <li><a href="#how-to">How To Play</a></li>
                     <li><a href="#reviews">Reviews</a></li>
@@ -78,8 +78,9 @@
     </header>
 
     <!-- Floating Download Button -->
+    <!-- Link 2: Floating Download -->
     <div class="floating-download">
-        <a href="https://app.adjust.com/1ivn71t0?label=DEPAMF&redirect=https%3A%2F%2Fdown.dd7778.com%2F" class="btn">⬇️ Download DD Game Now</a>
+        <a href="https://down.dd7778.com/" target="_blank" rel="noopener noreferrer" class="btn">⬇️ Download DD Game Now</a>
     </div>
 
     <main class="container">
@@ -121,7 +122,8 @@
 
         <p>If you want the DD Game download for Android, use the button below.</p>
 
-        <a href="#" class="btn">👉 Download DD Game APK (Official Link)</a>
+        <!-- Link 3: Main Body Download Button -->
+        <a href="https://down.dd7778.com/" target="_blank" rel="noopener noreferrer" class="btn">👉 Download DD Game APK (Official Link)</a>
 
         <p>
             This is the original DD Game APK, safe to install on Android phones.
@@ -245,7 +247,6 @@
                 WebP format for faster loading).</p>
 
             <div class="screenshots-grid">
-                <!-- Optimized Image Alt Texts and implied filenames -->
                 <div class="screenshot">
                     <img src="/images/dd-game-app-home-screen-android.webp" alt="Screenshot of DD Game app home screen listing Rummy, Ludo, Teen Patti, and other skill games on Android."
                         class="responsive-img" loading="lazy" width="600" height="1200">
@@ -329,7 +330,8 @@
             Download the app, explore free games first, and play only what you’re comfortable with.
         </p>
 
-        <a href="#" class="btn">👉 Download DD Game App for Android Now</a>
+        <!-- Link 4: Footer CTA Download Button -->
+        <a href="https://down.dd7778.com/" target="_blank" rel="noopener noreferrer" class="btn">👉 Download DD Game App for Android Now</a>
 
         <p style="font-size:0.85rem; margin-top:15px;">
             <strong>Disclaimer:</strong><br>
@@ -392,24 +394,22 @@
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
                     window.scrollTo({
-                        top: targetElement.offsetTop - 80, // Adjust for fixed header
+                        top: targetElement.offsetTop - 80,
                         behavior: 'smooth'
                     });
                 }
             });
         });
 
-        // Simple script to handle the real download CTA (if needed)
+        // Download link click handler
         document.querySelectorAll('a[download]').forEach(dlLink => {
             dlLink.addEventListener('click', function() {
-                // You can add analytics tracking here
                 console.log('Download initiated for: ' + this.href);
             });
         });
     </script>
 
-    <!-- Schema.org Structured Data (JSON-LD) - CORRECTED & ENHANCED -->
-    <!-- 1. ARTICLE Schema for main content (for E-E-A-T) -->
+    <!-- Schema.org Structured Data (JSON-LD) -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -439,7 +439,6 @@
         "image": "https://ddgame.space/images/dd-game-logo.webp"
     }
     </script>
-    <!-- 2. Updated SOFTWAREAPPLICATION Schema (Fixed URLs) -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -475,7 +474,6 @@
         "featureList": "Rummy, Ludo, Teen Patti, Poker, Andar Bahar, Dragon Tiger, 1250+ games, Real Cash Tournaments, Fast Withdrawals, 24/7 Support, UPI Payments"
     }
     </script>
-    <!-- 3. Updated FAQPage Schema (Includes all FAQs for rich results) -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -516,7 +514,6 @@
         ]
     }
     </script>
-    <!-- 4. WEBSITE Schema (Optional, for Sitelinks Searchbox) -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
